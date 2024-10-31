@@ -13,6 +13,9 @@
 //
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+//Gil Feldman, 176428217, gfeldman@myseneca.ca
+
 #include <iostream>
 #include "input.h"
 #include "dma.h"
@@ -54,7 +57,7 @@ void test_getInts(){
    cout << "You entered: " << num << endl;
 }
 
-void test_Contact(){
+void test_Contact() {
    Contact* cptr;
    cout << "Enter the following:\nJohn\nDoe\n4412345123456\n" << endl;
    cptr = getContact();

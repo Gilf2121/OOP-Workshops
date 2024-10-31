@@ -1,3 +1,5 @@
+//This file was create by Gil Feldman, all code used was either created by me or provided by the professor.
+
 #ifndef SENECA_CSTR_H
 #define SENECA_CSTR_H
 namespace seneca {

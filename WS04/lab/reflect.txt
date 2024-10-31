@@ -1,0 +1,14 @@
+Gil Feldman - 176428217 - gfeldman@myseneca.ca
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+
+
+During this workshop some of the concepts that i learned and used include Constructors, Overloading,
+Query methods, Modifier methods, and special methods. I created different types of methods to
+Modify data from objects, read data from objects,and create objects. I also used overloading to
+create multiple functions with the same name, but different parameters in order to make sure
+the correct function is being used without needing to manually call it for each instance.
+
+Another concept that i used in this workshop is the "this" keyword. The "this" keyword contains 
+the address to the current object. In my workshop the "this" keyword is used to return the 
+address of the object that has just been modified.

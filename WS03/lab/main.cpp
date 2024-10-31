@@ -13,6 +13,9 @@
 //
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+
+//This file was create by Gil Feldman, all code used was either created by me or provided by the professor.
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <cstdio>
@@ -21,11 +24,14 @@ using namespace std;
 using namespace seneca;
 void listCCs();
 int main() {
+
    CC cc;
    cc.set();
    cc.set("Hubert Blaine", 4098765423457896, 100);
+
    cout << "Valid credit card record: " << endl;
    cc.display();
+   
    cout << "+-----+--------------------------------+---------------------+-----+-------+" << endl;
    cout << "Valid credit card with very long name: " << endl;
    cc.set("Hubert Blaine Wolfeschlegelsteinhausenbergerdorff Sr.", 4098765423457896, 123, 1, 32);
@@ -93,4 +99,5 @@ void listCCs() {
    } while(numRead==5);
    cout << "+-----+--------------------------------+---------------------+-----+-------+" << endl;
    if (ccfile) fclose(ccfile);
+   
 }

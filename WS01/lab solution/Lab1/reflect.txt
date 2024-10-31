@@ -1,0 +1,8 @@
+the topics i have learned in completing this workshop are; namespaces, and using the solution explorer.
+Namespaces assist with collaboration in large teams by allowing multiple functions to have the same name.
+Functions with the same name must be defined in seperate namespaces and for a function to be used it must be called in its namespace.
+Even though functions can only have one defenition they can have multiple declerations.
+Another topic that i learned about from this workshop is the 'auto' keyword. 
+The auto keyword can be used to define a variable without a set type, however the variable must have a value when it is used with the auto keyword.
+With this workshop i did not have much difficulty.
+

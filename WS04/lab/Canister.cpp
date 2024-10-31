@@ -4,6 +4,8 @@
 using namespace std;
 namespace seneca {
 
+   //Canister::Canister
+
    const double PI = 3.14159265;
    
 
@@ -52,4 +54,61 @@ namespace seneca {
       }
       return cout;
    }
+   Canister& Canister::clear() {
+       m_contentVolume = 0;
+       
+       freeMem(m_contentName);
+       
+       return *this;
+   }
+
+   Canister& Canister::setContent(const char* contentName) {
+       if (&contentName != NULL && usable()==1)
+       {
+           if (isEmpty() == 1 || m_contentName == NULL) {
+               alocpy(m_contentName, contentName);
+           }
+           else if (strcmp(m_contentName,contentName)!= 0)
+           {
+               setToUnusable();
+           }
+       }
+       else
+       {
+           alocpy(m_contentName, contentName);
+       }
+       return *this;
+   }
+
+   Canister& Canister::pour(double quantity) {
+       if (usable()==1 )
+       {
+           if (quantity > 0 && (quantity + volume()) < capacity()) {
+               m_contentVolume += quantity;
+           }
+           else
+           {
+               setToUnusable();
+           }
+       }
+       return *this;
+   }
+
+   Canister& Canister::pour(Canister& can) {
+       if (usable()==1)
+       {
+           if (can.m_contentVolume > (capacity() - m_contentVolume)) {
+               can.m_contentVolume -= capacity() - m_contentVolume;
+               m_contentVolume = capacity();
+           }
+           else if (can.m_contentVolume<capacity()-m_contentVolume)
+           {
+               m_contentVolume = can.m_contentVolume + m_contentVolume;
+               can.m_contentVolume = 0;
+           }
+           setContent(can.m_contentName);
+       }
+       return *this;
+   }
+
 }

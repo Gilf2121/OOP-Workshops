@@ -39,7 +39,7 @@ int main() {
    C[1].setContent("Milk").pour(100);
    C[2].setContent("Olive Oil").pour(20000);
    C[3].setContent("Orange Juice").pour(500);
-   C[5].setContent("Apple Juice");
+   C[5].setContent("Apple Juice");  
    showCans("Good Containers", C, 5);
    showCans("Emptied Milk canister into another", &C[0].pour(C[1]), 2);
    C[4].pour(C[3]);

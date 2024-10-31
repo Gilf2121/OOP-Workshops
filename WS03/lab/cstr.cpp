@@ -1,3 +1,5 @@
+//This file was create by Gil Feldman, all code used was either created by me or provided by the professor.
+
 #include "cstr.h"
 namespace seneca {
    void freeMem(char*& mem)

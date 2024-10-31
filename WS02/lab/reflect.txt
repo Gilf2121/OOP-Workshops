@@ -1,0 +1,14 @@
+//Gil Feldman, 176428217, gfeldman@myseneca.ca
+
+The topics that i learned/used in completing this workshop were; C++ types such as bools,
+compound types such as structs, dynamic memory allocation and deletion, and scopes.
+In c++ Bool types are equal to either 0 which means false, or 1 (or more) meaning true.
+Bools are very useful for flags since they only have a true/false value, even though they can
+be set as differnt numbers. Another topic i learned about is scopes. Scope refers to wether
+a variable or object is visible to the program. A variable that is in main can be used by a 
+function under main, however any variables declared in the subfunction will not be available
+to use in main since they are out of scope. Likewise any variables from main used in the 
+subfunction will be shadowed, and therefore not actually be changed in the main function.
+Lastly, in this workshop i learned about dynamic memory allocation/deallocation and how to create
+memory for a variable with the "new" keyword, and how to delete the memory and the pointer to it
+with the "delete" keyword.

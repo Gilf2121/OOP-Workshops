@@ -1,3 +1,7 @@
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+//Gil Feldman, 176428217, gfeldman@myseneca.ca
+
+
 #ifndef SENECA_INPUT_H
 #define SENECA_INPUT_H
 namespace seneca {
@@ -13,7 +17,7 @@ namespace seneca {
    /// <param name="minVal">int: Minimum acceptable value</param>
    /// <param name="maxVal">int: Maximum acceptable value</param>
    /// <returns>The integer read from the console</returns>
-   
+   int getInt(int minVal, int maxVal);
 
    /// <summary>
    /// Performs an integer entry from the console only if the values are within the acceptable limits.
@@ -22,7 +26,7 @@ namespace seneca {
    /// <param name="minVal">int: Minimum acceptable value</param>
    /// <param name="maxVal">int: Maximum acceptable value</param>
    /// <returns>bool: true if the number is successfully read, or false otherwise</returns>
-   
+   int getInt(int &num, int minVal, int maxVal);
 
 }
 #endif // !SENECA_IO_H

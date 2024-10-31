@@ -1,12 +1,16 @@
 #ifndef SENECA_CANISTER_H
 #define SENECA_CANISTER_H
 #include <iostream>
+#include "cstr.h"
+
 namespace seneca {
    class Canister {
       char* m_contentName;
       double m_diameter; // in centimeters 
       double m_height;   // in centimeters
       double m_contentVolume;  // in CCs
+
+     
 
       /// <summary>
       /// renders the canister unusable by freeing the conent name memory and setting diamieter and height to -1
@@ -41,6 +45,53 @@ namespace seneca {
    public:
 
       std::ostream& display()const;
+      //no arg
+      Canister(void) {
+          m_contentName = nullptr;
+          m_height = 13;
+          m_diameter = 10;
+          m_contentVolume = 0;
+
+
+      };
+      //one arg
+      Canister(const char* contentName)
+      {
+          m_contentName = nullptr;
+          m_height = 13;
+          m_diameter = 10;
+          m_contentVolume = 0;
+          alocpy(m_contentName, contentName);
+
+          
+      };
+      //3 arg
+      Canister(
+          double height,
+          double diameter,
+          const char* contentName = nullptr
+          )
+      {
+          m_contentName = nullptr;
+          m_height = height;
+          m_diameter = diameter;
+          m_contentVolume = 0;
+
+          if (usable() == 1) {
+              alocpy(m_contentName, contentName);
+
+          }
+          
+      };
+      Canister& clear();
+
+      Canister& setContent(const char* contentName);
+
+      Canister& pour(double quantity);
+
+      Canister& pour(Canister& can);
+
+      
    };
 }
 
